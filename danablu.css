@@ -906,7 +906,7 @@
   height: 24px;
   display: block;
   background-repeat: no-repeat;
-  background-image: url(sprites/csg-49a476211914a.png);
+  background-image: url(sprites/sprites.png);
   margin: 3px 5px 0 5px;
 }
 
@@ -974,4 +974,48 @@
     padding-right: 10px;
     border-bottom: 3px solid #ccc;
   }
+
+/* @group Front page */
+
+#ddk-frontpage-list .column {
+  width: 49.5%;
+}
+
+
+#ddk-frontpage-list .column.right {
+  float: right;
+  margin-left: 10px;
+}
+
+#ddk-frontpage-list h4, 
+#ddk-frontpage-list p {
+  margin-left: 58px;
+}
+
+#ddk-frontpage-list span.icon {
+  display: block;
+  float: left;
+  height: 48px;
+  width: 48px;
+  background-repeat: no-repeat;
+  background-image: url(sprites/sprites.png);
+}
+
+#ddk-frontpage-list #ddk-frontpage-viden span.icon {
+  background-position: -130px -90px;
+}
+
+#ddk-frontpage-list #ddk-frontpage-social span.icon {
+  background-position: -50px -90px;
+}
+
+#ddk-frontpage-list #ddk-frontpage-kom-igang span.icon {
+  background-position: -50px -250px;
+}
+
+#ddk-frontpage-list #ddk-frontpage-erfaringsudveksling span.icon {
+  background-position: -50px -170px;
+}
+
+/* @end */
 
