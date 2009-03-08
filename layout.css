@@ -178,12 +178,6 @@
   {
     margin-top: 70px; /* Set this to the same value as the navbar height above. */
   }
-  
-  body.front.with-navbar #content 
-  {
-	/** There's no bread crumb on the front page, so don't leave room for it. **/
-    margin-top: 40px;
-  }
 
   #navbar-inner
   {
