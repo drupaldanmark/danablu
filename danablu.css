@@ -285,6 +285,7 @@
 	overflow: hidden;
 	border-right: 1px solid white;
 	border-left: 1px solid white;
+	cursor: pointer;
   }
   
   #primary .tab-links a:hover
