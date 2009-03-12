@@ -979,13 +979,15 @@
 /* @group Front page */
 
 #ddk-frontpage-list .column {
-  width: 49.5%;
+  width: 49.1%;
 }
 
+#ddk-frontpage-list .column.left {
+  float: left;
+}
 
 #ddk-frontpage-list .column.right {
   float: right;
-  margin-left: 10px;
 }
 
 #ddk-frontpage-list h4, 
