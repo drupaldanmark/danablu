@@ -50,8 +50,6 @@
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"><div class="node-inner">
 
-  <?php print $picture; ?>
-
   <?php if (!$page): ?>
     <h2 class="title">
       <a href="<?php print $node_url; ?>" title="<?php print $title ?>"><?php print $title; ?></a>
@@ -62,8 +60,13 @@
     <div class="unpublished"><?php print t('Unpublished'); ?></div>
   <?php endif; ?>
 
-  <?php if ($submitted or $terms): ?>
-    <div class="meta">
+  <div class="content">
+    <?php print $content; ?>
+  </div>
+
+  <?php if (!$teaser && ($submitted || $terms)): ?>
+    <div class="meta clear-block">
+      <?php print $picture; ?>
       <?php if ($submitted): ?>
         <div class="submitted">
           <?php print $submitted; ?>
@@ -75,11 +78,7 @@
       <?php endif; ?>
     </div>
   <?php endif; ?>
-
-  <div class="content">
-    <?php print $content; ?>
-  </div>
-
   <?php print $links; ?>
 
 </div></div> <!-- /node-inner, /node -->
+
