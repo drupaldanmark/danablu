@@ -48,12 +48,6 @@
     <div class="unpublished"><?php print t('Unpublished'); ?></div>
   <?php endif; ?>
 
-  <?php if ($picture) print $picture; ?>
-
-  <div class="submitted">
-    <?php print $submitted; ?>
-  </div>
-
   <div class="content">
     <?php print $content; ?>
     <?php if ($signature): ?>
@@ -63,6 +57,15 @@
     <?php endif; ?>
   </div>
 
+  <?php if ($submitted || $picture): ?>
+  <div class="meta clear-block">
+    <?php if ($picture) print $picture; ?>
+    <div class="submitted">
+      <?php print $submitted; ?>
+    </div>
+  </div>
+  <?php endif; ?>
+
   <?php if ($links): ?>
     <div class="links">
       <?php print $links; ?>
@@ -70,3 +73,4 @@
   <?php endif; ?>
 
 </div></div> <!-- /comment-inner, /comment -->
+
