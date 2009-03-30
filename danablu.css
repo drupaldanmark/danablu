@@ -436,6 +436,7 @@
   .node h2.title /* Node title */
   {
 	margin-top: 0;
+	font-size: 2em;
   }
 
   .marker /* "New" or "Updated" marker for content that is new or updated for the current user */
@@ -453,7 +454,8 @@
     position: relative; /* Otherwise floated pictures will appear below the "Unpublished" text. */
   }
 
-  .node .meta /* Wrapper for submitted and terms data */
+  .node .meta, /* Wrapper for submitted and terms data */
+  .comment .meta
   {
 	color: #777;
   }
@@ -497,6 +499,23 @@
   {
     /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
   }
+
+/* @group Userpic within node or comment meta */
+
+.node .meta .picture,
+.comment .meta .picture {
+  float: left;
+}
+
+.node .meta .picture img,
+.comment .meta .picture img {
+  height: 32px;
+  width: 32px;
+  border: 1px solid #163a6b;
+  margin-right: 6px;
+}
+
+/* @end */
 
 /** Drupal comments **/
   #comments /* Wrapper for the list of comments and its title */
