@@ -1,0 +1,21 @@
+/* $Id$ */
+
+/**
+ * @file ie6.css
+ * Overrides to make the site look halfway decent in IE 6.
+ */
+
+#primary .tab-links a {
+  width: 120px;
+}
+
+#primary .tab-icon {
+  margin-left: 2px;
+}
+
+/** Use the same background for the entire tab **/
+#primary .tab-links .tab-text {
+  background-image: none;
+  background-color: transparent;
+}
+

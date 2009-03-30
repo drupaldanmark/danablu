@@ -39,7 +39,7 @@ stylesheets[print][] = print.css
 stylesheets[all][]   = zen.css
 
   ; Set the conditional stylesheets that are processed by IE.
-; conditional-stylesheets[if IE][all][] = ie.css
+conditional-stylesheets[if IE 6][all][] = ie6.css
 
   ; Optionally add some jquery scripts to your theme.
 ; scripts[] = script.js
