@@ -1,0 +1,8 @@
+Danablu theme
+=============
+
+What is currently called Danablu has been the theme for 
+[Drupal Danmark](http://drupaldanmark.dk/) since we upgraded to Drupal 5,
+and by now feels a bit dated. We’ll continue to keep it updated until we
+can get a new design going, though.
+
