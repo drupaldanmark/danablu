@@ -24,14 +24,14 @@ base theme = zen
   ; You can also override any of Zen's stylesheets or any module's stylesheets,
   ; an /extremely/ useful feature. See the excellent Drupal 6 Theme Guide at
   ; http://drupal.org/node/171209 for more details.
-stylesheets[all][]   = layout.css
-stylesheets[all][]   = html-elements.css
+stylesheets[all][]   = css/layout.css
+stylesheets[all][]   = css/html-elements.css
 ; stylesheets[all][] = tabs.css
 ; stylesheets[all][] = messages.css
 ; stylesheets[all][] = block-editing.css
 ; stylesheets[all][] = wireframes.css
-stylesheets[all][]   = danablu.css
-stylesheets[print][] = print.css
+stylesheets[all][]   = css/danablu.css
+stylesheets[print][] = css/print.css
   ; To prevent stylesheets of a base theme or of a module from being included in
   ; our sub-theme, we specify it in our .info file (and we don't need to have a
   ; stylesheet in our sub-theme with that name.) For example, we prevent the
@@ -39,7 +39,7 @@ stylesheets[print][] = print.css
 stylesheets[all][]   = zen.css
 
   ; Set the conditional stylesheets that are processed by IE.
-conditional-stylesheets[if IE 6][all][] = ie6.css
+conditional-stylesheets[if IE 6][all][] = css/ie6.css
 
   ; Optionally add some jquery scripts to your theme.
 ; scripts[] = script.js
