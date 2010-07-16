@@ -1041,3 +1041,10 @@
 
 /* @end */
 
+/** RSS feed list block **/
+
+#block-block-4 .content li {
+  margin: 0 0 3px 0;
+  list-style-image: url(../images/feed.png);
+}
+
