@@ -1059,4 +1059,8 @@
 }
 
 /** Job postings **/
+#content .node-type-job .job-meta {
+  float: right;
+  width: 220px;
+}
 
