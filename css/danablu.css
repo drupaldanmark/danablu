@@ -373,6 +373,28 @@
   {
   }
 
+  #footer-inner .block-menu ul
+  {
+    text-align: center;
+  }
+
+  #footer-inner .block-menu ul li
+  {
+    list-style: none;
+    display: inline;
+  }
+
+  /* This doesn't work for ie, but we don't care */
+  #footer-inner .block-menu ul li:after
+  {
+    content: " •";
+  }
+
+  #footer-inner .block-menu ul li:last-child:after
+  {
+    content: "";
+  }
+
 /** closure **/
   #closure-blocks /* Wrapper for any blocks placed in the closure region */
   {
