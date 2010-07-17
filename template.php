@@ -243,3 +243,42 @@ function danablu_tab_links($links, $attributes = array('class' => 'links tab-lin
   return $output;
 }
 
+function danablu_node_form($form) {
+  // Add js for job node form.
+  if (isset($form['#node']->type) && $form['#node']->type == 'job') {
+    drupal_add_js(drupal_get_path('theme', 'danablu') . '/js/job-node-form.js');
+  }
+  $output = "\n<div class=\"node-form\">\n";
+
+  // Admin form fields and submit buttons must be rendered first, because
+  // they need to go to the bottom of the form, and so should not be part of
+  // the catch-all call to drupal_render().
+  $admin = '';
+  if (isset($form['author'])) {
+    $admin .= "    <div class=\"authored\">\n";
+    $admin .= drupal_render($form['author']);
+    $admin .= "    </div>\n";
+  }
+  if (isset($form['options'])) {
+    $admin .= "    <div class=\"options\">\n";
+    $admin .= drupal_render($form['options']);
+    $admin .= "    </div>\n";
+  }
+  $buttons = drupal_render($form['buttons']);
+
+  // Everything else gets rendered here, and is displayed before the admin form
+  // field and the submit buttons.
+  $output .= "  <div class=\"standard\">\n";
+  $output .= drupal_render($form);
+  $output .= "  </div>\n";
+
+  if (!empty($admin)) {
+    $output .= "  <div class=\"admin\">\n";
+    $output .= $admin;
+    $output .= "  </div>\n";
+  }
+  $output .= $buttons;
+  $output .= "</div>\n";
+
+  return $output;
+}
