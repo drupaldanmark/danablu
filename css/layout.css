@@ -318,3 +318,9 @@
     overflow-y: hidden;
   }
   */
+
+
+/** tabs fix **/
+.tabs .primary li {
+  background: url(images/tab-left.png) no-repeat left 0;
+}
