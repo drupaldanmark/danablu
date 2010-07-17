@@ -1061,6 +1061,7 @@
 /** Job postings **/
 #content .node-type-job .job-meta {
   float: right;
+  margin-left: 20px;
   width: 220px;
 }
 
