@@ -126,18 +126,28 @@ function danablu_preprocess_page(&$vars, $hook) {
 }
 
 /**
- * Override or insert variables into the node templates.
+ * Override or insert variables into the location templates.
  *
  * @param $vars
  *   An array of variables to pass to the theme template.
  * @param $hook
- *   The name of the template being rendered ("node" in this case.)
+ *   The name of the template being rendered ("location" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function danablu_preprocess_node(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+function danablu_preprocess_location(&$vars, $hook) {
+  if ($vars['latitude'] && $vars['longitude']) {
+    $map_url = url('http://maps.google.com/maps/api/staticmap', array(
+      'external' => TRUE,
+      'query' => array(
+        'markers' => 'color:0x0077C0|' . $vars['latitude'] . ',' . $vars['longitude'],
+        'language' => 'da',
+        'size' => '180x200',
+        'zoom' => 15,
+        'sensor' => 'false',
+    )));
+
+    $vars['location_map_image'] = theme('image', $map_url, '', '', array('height' => 200, 'width' => 180), FALSE);
+  }
 }
-// */
 
 /**
  * Override or insert variables into the comment templates.

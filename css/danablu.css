@@ -1053,3 +1053,10 @@
   list-style-image: url(../images/feed.png);
 }
 
+/** Hide location geo coordinates **/
+.location-locations-wrapper span.geo {
+  display: none;
+}
+
+/** Job postings **/
+

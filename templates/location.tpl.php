@@ -9,6 +9,9 @@
 ?></div>
 <?php }?>
 <?php
+  if ($postal_code) {
+    echo '<span class="postal-code">' . $postal_code . '</span>&nbsp;';
+  }
   if ($city) {
     echo '<span class="locality">' . $city . '</span>';
     if ($province) {
@@ -17,9 +20,6 @@
   }
   if ($province) {
     echo '<span class="region">' . $province_print . '</span> ';
-  }
-  if ($postal_code) {
-    echo ' <span class="postal-code">' . $postal_code . '</span>';
   }
 ?>
 <?php if ($country_name) { ?>
@@ -37,6 +37,9 @@
   <span><?php print $fax; ?></span>
 </div>
 <?php endif; ?>
+
+<?php print $location_map_image; ?>
+
 <?php
   // "Geo" microformat, see http://microformats.org/wiki/geo
   if ($latitude && $longitude) {
