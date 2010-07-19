@@ -322,5 +322,35 @@
 
 /** tabs fix **/
 .tabs .primary li {
-  background: url(images/tab-left.png) no-repeat left 0;
+  background: url(../images/tab-left.png) no-repeat left -38px;
+  margin-right: 5px;
+}
+
+.tabs .primary li a {
+  display: block;
+  background: url(../images/tab-right.png) no-repeat right -38px;
+  border-bottom: 1px solid #BBB;
+  height: 18px;
+  padding: 6px 10px 0 5px;
+  margin-left: 3px;
+}
+
+.tabs .primary li.active {
+  background: url(../images/tab-left.png) no-repeat left 0;
+}
+
+.tabs .primary li.active a {
+  background: url(../images/tab-right.png) no-repeat right 0 !important;
+}
+
+.tabs .primary li.active a:hover {
+  cursor: default;
+}
+
+.tabs .primary li:hover {
+  background: url(../images/tab-left.png) no-repeat left -76px;
+}
+
+.tabs .primary li:hover a {
+  background: url(../images/tab-right.png) no-repeat right -76px;
 }
